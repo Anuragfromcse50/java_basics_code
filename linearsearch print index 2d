@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class findindex2d {
+     public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+
+        //inputting rows and columns
+        System.out.println("enter number of rows : ");
+        int r=sc.nextInt();
+         System.out.println("enter number of cols : ");
+             int c=sc.nextInt();
+
+        int[][]values= new int [r][c];// decalartion of array
+
+        //inputting values
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                 System.out.println("enter values as index "+i+" , "+j);
+                values[i][j]=sc.nextInt();
+            }
+        }
+
+         System.out.println("enter numbers that you want to search  ");
+        int x=sc.nextInt();
+
+        //printing output
+        boolean found=false;
+         for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                if (x==values[i][j]){
+                    System.out.println("The number  "+ x +" is found at index "+ i + " , "+j);
+                found=true;
+                break;
+
+            }}
+
+            if(!found){ 
+              System.out.println("The number numbers not found  ");  
+            }
+            /*if(found==false){ 
+              System.out.println("The number numbers not found  ");  
+            } */
+
+            
+    }
+}
+}
+
